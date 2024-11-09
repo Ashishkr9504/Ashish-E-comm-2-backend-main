@@ -5,13 +5,15 @@ const orderModel = require('../../models/orderProductModel')
 
 exports.checkOut = async(req, res) => {
     try{
+        console.log(req.body)
         const options = {
             amount: Number(req.body.amount)*100,  // amount in the smallest currency unit
             currency: "INR",
             receipt: "order_rcptid_11",
             notes:{
-                name:"arijit",
-                title:"barik"
+                
+                name:"ashish",
+                title:"kumar"
             }
           };
           const order = await instance.orders.create(options)
