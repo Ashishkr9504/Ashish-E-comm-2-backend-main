@@ -6,7 +6,7 @@ const getCategoryWiseProduct = async(req,res)=>{
         if(!category){
             return res.status(400).json({
                 success:false,
-                message:"hii baby"
+                message:"hii "
             })
         }
         const product = await productModel.find({ category })
